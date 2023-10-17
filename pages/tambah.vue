@@ -8,6 +8,7 @@
             <input v-model="nama" placeholder="nama"> <br />
             <input v-model="anggota" placeholder="anggota"> <br />
             <input v-model="keperluan" placeholder="keperluan"> <br />
+            <button type="submit">kirim</button>
         </form>
     </div>
     </template>
