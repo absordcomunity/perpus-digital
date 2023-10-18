@@ -9,7 +9,7 @@
             </select> <br>
             <textarea v-model="form.keperluan" cols="30" rows="10" placeholder="Keperluan..."></textarea> <br>
             <button type=“submit”>Kirim</button> 
-            <NuxtLink to=“/“>Kembali</NuxtLink>
+            <NuxtLink to='/'>Kembali</NuxtLink>
         </form>
     </div>
     </template>
