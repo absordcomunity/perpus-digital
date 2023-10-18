@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>catatan pengunjung perpustakaan</h1>
+        <h1><center>Catatan Pengunjung Perpustakaan</center></h1>
         <hr>
         <slot />
     </div>  
