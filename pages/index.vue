@@ -1,9 +1,11 @@
 <template>
+    <br />
     <h2>Riwayat Kunjungan</h2>
-    <NuxtLink to="/tambah">Isi Buku Tamu</NuxtLink>
+    <NuxtLink to="/tambah" class="btn btn-outline-secondary">Isi Buku Tamu</NuxtLink>
     <div>
-        <table border="1" width="50%">
-        <thead>
+        <br />
+        <table class="table">
+        <thead  class="table-dark">
             <tr>
                 <th>#</th>
                 <th>TANGGAL dan WAKTU</th>
