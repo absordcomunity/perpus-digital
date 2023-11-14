@@ -5,6 +5,7 @@
             <input v-model="form.nama" type="text" placeholder="Nama ..." required> <br >
             <select v-model="form.anggota">
                 <option value="">Pilih Anggota</option>
+                
                 <option v-for="a in anggota" :key="a.id" value="a.id">{{ a.nama }}</option>
             </select> <br>
             <textarea v-model="form.keperluan" cols="30" rows="10" placeholder="Keperluan..."></textarea> <br>

@@ -1,4 +1,5 @@
 <template>
+    <h2>Catatan Pengunjung</h2>
     <div>
         <NuxtLink to="/tambah">Isi Buku Tamu</NuxtLink>
         <table border="1" width="50%">
@@ -37,3 +38,4 @@ async function getData() {
 onMounted(() => getData())
 
 </script>
+
