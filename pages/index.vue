@@ -1,7 +1,7 @@
 <template>
-    <h2>Catatan Pengunjung</h2>
+    <h2>Riwayat Kunjungan</h2>
+    <NuxtLink to="/tambah">Isi Buku Tamu</NuxtLink>
     <div>
-        <NuxtLink to="/tambah">Isi Buku Tamu</NuxtLink>
         <table border="1" width="50%">
         <thead>
             <tr>
