@@ -8,7 +8,7 @@
         <input v-model="form.nama" type="text" placeholder="Nama" class="form-control" />
       </div>
       <div class="mb-3">
-        <select v-model="form.anggota" placholder="Keanggotaan" class="form-control">
+        <select v-model="form.anggota" placeholder="Keanggotaan" class="form-control">
           <option value="pilih keanggotaan">Umum</option>
           <option value="1">Siswa</option>
           <option value="2">Guru</option>
