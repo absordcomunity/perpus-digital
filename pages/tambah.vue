@@ -1,50 +1,53 @@
 <template>
-<div class="mb-3">
+  <div>
+    <h2 class="text-center">Isi Buku Tamu</h2>
     <br />
-    <h2>Isi Buku Tamu</h2>
-    <br />
-    <form @submit.prevent="SimpanKunjungan">
-    <input v-model="form.nama" type="text" placeholder="Nama ..." required />
-    <br />
-    <select v-model="form.anggota">
-        <option value="">Pilih Anggota</option>
-
-        <option v-for="a in anggota" :key="a.id" :value="a.id">
-        {{ a.nama }}
-        </option>
-    </select>
-    <br />
-    
-    <textarea
-        v-model="form.keperluan"
-        cols="30"
-        rows="10"
-        placeholder="Keperluan..."
-    ></textarea>
-    <br />
-    <button type="“submit”" class="btn btn-primary">Kirim</button>
-    <NuxtLink to="/" class="btn btn-outline-secondary">Kembali</NuxtLink>
+    <div v-if="sukses" class="alert alert-success">Berhasil Tersimpan</div>
+    <form @submit.prevent="simpan()">
+      <div class="mb-3">
+        <input v-model="form.nama" type="text" placeholder="Nama" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <select v-model="form.anggota" class="form-control">
+          <option value="pilih keanggotaan">Pilih keanggotaan</option>
+          <option value="1">Siswa</option>
+          <option value="2">Guru</option>
+          <option value="3">Staf</option>
+        </select>
+      </div>
+      <div v-if="form.anggota == 1" class="mb-3">
+        <input v-model="form.kelas" type="text" class="form-control" placeholder="kelas" />
+      </div>
+      <div class="mb-3">
+        <textarea v-model="form.keperluan" cols="30" rows="3" placeholder="keperluan" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Kirim</button>
+      <NuxtLink to="/" class="btn btn-outline-secondary">Kembali</NuxtLink>
     </form>
-</div>
+  </div>
 </template>
     
-    <script setup>
+<script setup>
 const supabase = useSupabaseClient();
-const anggota = ref([]);
 const form = reactive({
-nama: "",
-anggota: "",
-keperluan: "",
+  nama: "",
+  anggota: "",
+  kelas: "",
+  keperluan: "",
 });
 
-async function getAnggota() {
-const { data, error } = await supabase.from("anggota").select();
-if (data) anggota.value = data;
+const sukses = ref(false);
+
+async function simpan() {
+  sukses.value = false;
+  const { error } = await supabase.from("pengunjung").insert(form);
+
+  if (!error) {
+    sukses.value = true;
+    form.nama = ''
+    form.anggota = ''
+    form.kelas = ''
+    form.keperluan = ''
+  }
 }
-async function SimpanKunjungan() {
-  //   console.log(form);
-const { error } = await supabase.from("pengunjung").insert(form);
-}
-onMounted(() => getAnggota());
 </script>
-    
