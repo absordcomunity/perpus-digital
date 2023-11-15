@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h2 class="text-center">Isi Buku Tamu</h2>
+    <h2>Isi Buku Tamu</h2>
     <br />
-    <div v-if="sukses" class="alert alert-success">Berhasil Tersimpan</div>
+    <div v-if="sukses" class="alert alert-success">Berhasil Tersimpan!</div>
     <form @submit.prevent="simpan()">
       <div class="mb-3">
         <input v-model="form.nama" type="text" placeholder="Nama" class="form-control" />
       </div>
       <div class="mb-3">
-        <select v-model="form.anggota" class="form-control">
-          <option value="pilih keanggotaan">Pilih keanggotaan</option>
+        <select v-model="form.anggota" placholder="Keanggotaan" class="form-control">
+          <option value="pilih keanggotaan">Umum</option>
           <option value="1">Siswa</option>
           <option value="2">Guru</option>
           <option value="3">Staf</option>
