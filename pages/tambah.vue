@@ -8,15 +8,17 @@
         <input v-model="form.nama" type="text" placeholder="Nama" class="form-control" />
       </div>
       <div class="mb-3">
-        <select v-model="form.anggota"  placeholder="Keanggotaan" class="form-control">anggota
-          <option value="pilih keanggotaan">Umum</option>
+        <label for="exampleFormControlSelect1">Keanggotaan</label>
+        <select v-model="form.anggota"  placeholder="Keanggotaan" class="form-control">
           <option value="1">Siswa</option>
           <option value="2">Guru</option>
           <option value="3">Staf</option>
+          <option value="4">umum</option>
         </select>
       </div>
       <div v-if="form.anggota == 1" class="mb-3">
-        <select v-model="form.kelas" class="form-control" placeholder="kelas">kelas
+           <label for="exampleFormControlSelect1">Kelas</label>
+        <select v-model="form.kelas" class="form-control" placeholder="kelas">
              <option value="X PPLG 1">X PPLG 1</option> 
              <option value="X PPLG 2">X PPLG 2</option> 
              <option value="X PPLG 3">X PPLG 3</option> 
