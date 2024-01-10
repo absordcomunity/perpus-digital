@@ -62,7 +62,7 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlSelect2">Keperluan</label>
-        <select v-model="form.anggota"  placeholder="Keperluan" class="form-control">
+        <select v-model="form.keperluan"  placeholder="Keperluan" class="form-control">
           <option value="1">Membaca Buku</option>
           <option value="2">Meminjam Buku</option>
           <option value="3">Mengembalikan Buku</option>
