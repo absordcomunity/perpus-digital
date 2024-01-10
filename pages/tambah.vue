@@ -33,7 +33,7 @@
              <option value="X TBSM 4">X TBSM 4</option> 
              <option value="X DKV 1">X DKV 1</option> 
              <option value="X DKV 2">X DKV 2</option> 
-             <option value="X TOI 1">X DKV 1</option> 
+             <option value="X TOI 1">X TOI 1</option> 
              <option value="XI PPLG 1">XI PPLG 1</option> 
              <option value="XI PPLG 2">XI PPLG 2</option> 
              <option value="XI PPLG 3">XI PPLG 3</option> 
