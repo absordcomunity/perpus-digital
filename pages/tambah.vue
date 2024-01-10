@@ -35,7 +35,7 @@
              <option value="X DKV 2">X DKV 2</option> 
              <option value="X TOI 1">X DKV 1</option> 
              <option value="XI PPLG 1">XI PPLG 1</option> 
-             <option value="XI PPLG 2">XI IPPLG 2</option> 
+             <option value="XI PPLG 2">XI PPLG 2</option> 
              <option value="XI PPLG 3">XI PPLG 3</option> 
              <option value="XI PPLG 4">XI PPLG 4</option> 
              <option value="XI TJKT 1">XI TJKT 1</option> 
@@ -61,7 +61,13 @@
            </select>
       </div>
       <div class="mb-3">
-        <textarea v-model="form.keperluan" cols="30" rows="3" placeholder="keperluan" class="form-control"></textarea>
+        <label for="exampleFormControlSelect1">KEPERLUAN</label>
+        <select v-model="form.anggota"  placeholder="Keperluan" class="form-control">
+          <option value="1">Membaca Buku</option>
+          <option value="2">Meminjam Buku</option>
+          <option value="3">Mengembalikan Buku</option>
+          <option value="4">Mengunjungi Perpustakaan</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary">Kirim</button>
       <NuxtLink to="/" class="btn btn-outline-secondary">Kembali</NuxtLink>
